@@ -25,14 +25,12 @@ public class BaseClass
 	
 	}
 	
-	
 	public static void closingBrowser(WebDriver driver) throws InterruptedException
 	{
 		
 	Reporter.log("closing browser", true);
 	Thread.sleep(500);
 	driver.close();
-	
 	
 	}
 	

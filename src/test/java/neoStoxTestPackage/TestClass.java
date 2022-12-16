@@ -34,12 +34,12 @@ public class TestClass extends BaseClass
 	 @BeforeClass
 	  public void neoStoxLaunching() throws IOException
 	 {
-		
 		 launchNeostox();
 		 home=new HomePage(driver);
 		 sButton=new SignInButton(driver);
 		 signIn=new SignInPage(driver);
 		 password=new PasswordPage(driver);
+	
 		 
 	 }
 	 @BeforeMethod
@@ -57,6 +57,7 @@ public class TestClass extends BaseClass
 		 password.clickOnSubmitButton();
 		 Thread.sleep(1000);
 		 home.popUpHandel();
+	
 		 
 	  
 	 }
@@ -68,8 +69,7 @@ public class TestClass extends BaseClass
   Assert.assertEquals(home.getUserName(), Utility1.readDataFromPropertyFile("userName"),"TC failed, actual and expected User Names are not matching");
 	 
   }
-  
-  
+   
   
   @AfterMethod
   public void logOut()
