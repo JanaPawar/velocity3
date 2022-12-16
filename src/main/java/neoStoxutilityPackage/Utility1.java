@@ -25,6 +25,7 @@ public class Utility1 {
 		Reporter.log("reading value of "+key+" from property file",true);
 		return value;		
 	}
+	
 	public static void takeScreenshot(WebDriver driver,String fileName) throws IOException
 	{
 		File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -32,8 +33,10 @@ public class Utility1 {
 		FileHandler.copy(source, dest);
 		Reporter.log("taking screenshot ",true);
 	}
+	
 	public static void wait(WebDriver driver,int time)
 	{
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(time));
 		Reporter.log("waiting for "+time+"milis",true);
 	}
